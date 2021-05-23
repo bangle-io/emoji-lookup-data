@@ -7,7 +7,7 @@ We use the following terminology in the schema:
 - `EmojiChar`: The emoji character, example:"🙎","🙎‍♂️","🙎‍♀️","🙅","🙅‍♂️"
 - `EmojiIndex`: The number representing the index of the emoji in the `emoji.json` array.
 
-### data/alias-lookup.json
+### data/alias_lookup.json
 Schema: `Array<[Alias, EmojiChar, EmojiIndex]>
 
 Unlike every other file, the array's indices *donot* correspond to an emoji in `emoji.json`. To help with this lack of information, the third item of the nested array will always the `EmojiIndex`.

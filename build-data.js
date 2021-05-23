@@ -39,7 +39,7 @@ function main() {
       const aliasLookup = json.flatMap((r, i) =>
         r.aliases.map((a) => [a, r.emoji, i])
       );
-      return writeData(aliasLookup, "alias-lookup").then(() => json);
+      return writeData(aliasLookup, "alias_lookup").then(() => json);
     })
     .then((json) => {
       const keys = [
