@@ -1,0 +1,24 @@
+{
+  "name": "emoji-lookup-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "yarn node build-data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bangle-io/emoji-lookup-data.git"
+  },
+  "keywords": [],
+  "author": "Kushan Joshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bangle-io/emoji-lookup-data/issues"
+  },
+  "homepage": "https://github.com/bangle-io/emoji-lookup-data#readme",
+  "devDependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
