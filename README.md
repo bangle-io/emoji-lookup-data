@@ -8,12 +8,15 @@ We use the following terminology in the schema:
 - `EmojiIndex`: The number representing the index of the emoji in the `emoji.json` array.
 
 ### data/alias_lookup.json
-Schema: `Array<[Alias, EmojiChar, EmojiIndex]>
+Schema: `Array<[Alias, EmojiChar, EmojiIndex]>`
 
-Unlike every other file, the array's indices *donot* correspond to an emoji in `emoji.json`. To help with this lack of information, the third item of the nested array will always the `EmojiIndex`.
+Unlike every other file, this array's indices *donot* correspond to an emoji in `emoji.json`. To help with this lack of information, the third item of the nested array will always be the `EmojiIndex`.
 
 ### data/emoji.json
 Schema: `Array<EmojiChar>`
+
+The emoji char. The index of item `EmojiIndex` is used in other files to do a reverse lookup.
+
 
 ### data/description.json
 Schema: `Array<string>`
@@ -39,4 +42,3 @@ The tags of emoji. Each item in this file corresponds 1:1 to the emoji in `emoji
 ### data/unicode_version.json
 ### data/ios_version.json
 ### data/skin_tones.json
-
