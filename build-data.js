@@ -42,6 +42,19 @@ function main() {
       return writeData(aliasLookup, "alias_lookup").then(() => json);
     })
     .then((json) => {
+      const categoryLookup = json.reduce((prev, cur, index) => {
+        const category = cur.category;
+        if (!prev[category]) {
+          prev[category] = [];
+        }
+        prev[category].push(index);
+
+        return prev;
+      }, {});
+
+      return writeData(categoryLookup, "category_lookup").then(() => json);
+    })
+    .then((json) => {
       const keys = [
         "emoji",
         "description",
