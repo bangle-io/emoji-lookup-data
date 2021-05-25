@@ -8,6 +8,10 @@ We use the following terminology in the schema:
 - `EmojiChar`: The emoji character, example:"🙎","🙎‍♂️","🙎‍♀️","🙅","🙅‍♂️"
 - `EmojiIndex`: The number representing the index of the emoji in the `emoji.json` array.
 
+### data/gemoji.json
+
+The entire emoji file with `unicode_version` and `ios_version` removed.
+
 ### data/alias_lookup.json
 
 Schema: `Array<[Alias, EmojiChar, EmojiIndex]>`

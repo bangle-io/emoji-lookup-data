@@ -36,6 +36,13 @@ function main() {
   return fetch(url)
     .then((res) => res.json())
     .then((json) => {
+      const data = json.map((r) => {
+        const { unicode_version, ios_version, ...rest } = r;
+        return rest;
+      });
+      return writeData(data, "gemoji").then(() => json);
+    })
+    .then((json) => {
       const aliasLookup = json.flatMap((r, i) =>
         r.aliases.map((a) => [a, r.emoji, i])
       );
